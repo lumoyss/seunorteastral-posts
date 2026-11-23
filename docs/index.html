@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seu Norte Astral · Loja</title>
+<meta name="description" content="Calendários 2027, mapas astrais e consultas do Seu Norte Astral.">
+<meta property="og:title" content="Seu Norte Astral · Loja">
+<meta property="og:description" content="Calendários 2027, mapa astral e consulta. O caminho dos céus pra você.">
+<meta property="og:image" content="img/cal-geral.jpg">
+<link rel="icon" href="img/icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noite:#141a33; --noite2:#1f2850; --ouro:#c9a24a; --ouro2:#e6c97a;
+  --creme:#fbf7ee; --nevoa:#9aa0b4; --linha:rgba(230,201,122,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--noite);
+  background-image:
+    radial-gradient(1px 1px at 12% 8%,#fff8 50%,transparent 51%),
+    radial-gradient(1px 1px at 78% 14%,#fff6 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 40% 22%,#e6c97a99 50%,transparent 51%),
+    radial-gradient(1px 1px at 90% 40%,#fff5 50%,transparent 51%),
+    radial-gradient(1px 1px at 22% 55%,#fff5 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 65% 70%,#e6c97a80 50%,transparent 51%),
+    radial-gradient(1px 1px at 8% 85%,#fff5 50%,transparent 51%),
+    linear-gradient(180deg,var(--noite) 0%,var(--noite2) 100%);
+  background-attachment:fixed;
+  color:var(--creme); font-family:Montserrat,system-ui,sans-serif; font-size:15px; line-height:1.55;
+}
+.wrap{max-width:560px;margin:0 auto;padding:28px 16px 48px}
+header{text-align:center;padding:8px 0 22px}
+header img{width:132px;height:132px}
+h1{font-family:Cinzel,serif;font-weight:700;letter-spacing:.14em;font-size:26px;margin-top:10px;color:var(--ouro2)}
+.sub{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:19px;color:var(--creme);opacity:.9}
+.redes{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.redes a{font-size:12.5px;letter-spacing:.06em;color:var(--ouro2);text-decoration:none;border:1px solid var(--linha);padding:7px 14px;border-radius:999px}
+h2{font-family:Cinzel,serif;font-weight:500;letter-spacing:.12em;font-size:15px;color:var(--ouro);text-align:center;margin:30px 0 14px;text-transform:uppercase}
+h2::before,h2::after{content:"✦";margin:0 10px;font-size:10px;vertical-align:middle;opacity:.7}
+.card{background:rgba(31,40,80,.72);border:1px solid var(--linha);border-radius:16px;overflow:hidden;margin-bottom:16px}
+.card.destaque{border-color:var(--ouro);box-shadow:0 0 0 1px var(--ouro) inset,0 10px 30px rgba(0,0,0,.35)}
+.card img{width:100%;display:block;aspect-ratio:1588/1134;object-fit:cover;background:#0e1328}
+.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#0e1328}
+.galeria img{aspect-ratio:1588/1134}
+.corpo{padding:16px 16px 18px}
+.selo{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--noite);background:var(--ouro2);padding:3px 9px;border-radius:999px;margin-bottom:8px}
+.selo.breve{background:transparent;color:var(--nevoa);border:1px solid var(--nevoa)}
+h3{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:24px;line-height:1.15;color:var(--creme)}
+.desc{color:#d9dcea;margin:6px 0 12px;font-size:14px}
+ul.itens{list-style:none;margin:0 0 12px;font-size:13.5px;color:#d9dcea}
+ul.itens li{padding-left:18px;position:relative;margin:3px 0}
+ul.itens li::before{content:"✦";position:absolute;left:0;color:var(--ouro);font-size:10px;top:3px}
+.preco{font-family:Cinzel,serif;font-size:22px;color:var(--ouro2);margin-bottom:12px}
+.preco small{font-family:Montserrat,sans-serif;font-size:12px;color:var(--nevoa);letter-spacing:.02em}
+select{width:100%;font:inherit;font-size:15px;color:var(--creme);background:var(--noite);border:1px solid var(--linha);border-radius:10px;padding:11px 12px;margin-bottom:10px}
+.btn{display:block;width:100%;text-align:center;text-decoration:none;font-weight:600;letter-spacing:.04em;font-size:15px;padding:13px 14px;border-radius:12px;background:linear-gradient(180deg,var(--ouro2),var(--ouro));color:var(--noite);border:0;cursor:pointer}
+.btn.sec{background:transparent;color:var(--ouro2);border:1px solid var(--ouro)}
+.btn + .btn{margin-top:8px}
+.mini{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mini .card{margin:0}
+.mini h3{font-size:20px}
+.mini .desc{font-size:13px}
+.mini .btn{font-size:13.5px;padding:11px 8px}
+@media (max-width:380px){.mini{grid-template-columns:1fr}}
+.nota{font-size:12.5px;color:var(--nevoa);text-align:center;margin-top:28px}
+footer{text-align:center;margin-top:24px;font-size:12px;color:var(--nevoa)}
+footer img{width:40px;opacity:.8;display:block;margin:0 auto 6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <img src="img/selo.svg" alt="Selo Seu Norte Astral">
+  <h1>SEU NORTE ASTRAL</h1>
+  <p class="sub">o caminho dos céus, pra você</p>
+  <div class="redes">
+    <a href="https://www.instagram.com/seunorteastral/">Instagram</a>
+    <a href="https://www.tiktok.com/@seunorteastral">TikTok</a>
+    <a href="#" data-contato>Fale comigo</a>
+  </div>
+</header>
+
+<h2>Calendários 2027</h2>
+
+<div class="card destaque">
+  <div class="galeria">
+    <img src="img/cal-libra.jpg" alt="Capa do calendário 2027 de Libra">
+    <img src="img/cal-mes.jpg" alt="Página de um mês do calendário">
+    <img src="img/cal-verso.jpg" alt="Previsão do mês no verso">
+  </div>
+  <div class="corpo">
+    <span class="selo">Mais pedido</span>
+    <h3>Calendário 2027 do seu signo</h3>
+    <p class="desc">O ano inteiro do céu feito pro seu signo: o mês num lado, a previsão do mês no outro.</p>
+    <ul class="itens">
+      <li>Luas, retrógrados e eclipses do ano</li>
+      <li>Intensidade de cada dia e os melhores dias do mês</li>
+      <li>Previsão mensal pro seu signo e feriados comentados</li>
+      <li>PDF de 28 páginas pra ver no celular ou imprimir</li>
+    </ul>
+    <div class="preco">R$ 29,90 <small>· PDF</small></div>
+    <select id="signo" aria-label="Escolha seu signo">
+      <option value="">Escolha seu signo</option>
+      <option value="aries">Áries</option><option value="touro">Touro</option>
+      <option value="gemeos">Gêmeos</option><option value="cancer">Câncer</option>
+      <option value="leao">Leão</option><option value="virgem">Virgem</option>
+      <option value="libra">Libra</option><option value="escorpiao">Escorpião</option>
+      <option value="sagitario">Sagitário</option><option value="capricornio">Capricórnio</option>
+      <option value="aquario">Aquário</option><option value="peixes">Peixes</option>
+    </select>
+    <a class="btn" href="#" data-produto="calendario-signo">Quero o meu</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="img/cal-geral.jpg" alt="Capa do calendário 2027 geral" loading="lazy">
+  <div class="corpo">
+    <span class="selo">Presente de Natal</span>
+    <h3>Pacote com todos os calendários</h3>
+    <p class="desc">Os 12 signos, o Geral e o do Mundo. Pra dar de presente pra família e pros amigos.</p>
+    <div class="preco">R$ 97 <small>· 14 PDFs</small></div>
+    <a class="btn" href="#" data-produto="pacote">Quero o pacote</a>
+  </div>
+</div>
+
+<div class="mini">
+  <div class="card">
+    <img src="img/cal-mundo.jpg" alt="Capa do calendário 2027 Mundo" loading="lazy">
+    <div class="corpo">
+      <h3>Calendário Mundo</h3>
+      <p class="desc">Pra onde o mundo caminha em 2027, com os arcanos do ano.</p>
+      <div class="preco">R$ 29,90</div>
+      <a class="btn" href="#" data-produto="calendario-mundo">Quero</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/cal-geral.jpg" alt="Capa do calendário 2027 Geral" loading="lazy">
+    <div class="corpo">
+      <h3>Calendário Geral</h3>
+      <p class="desc">O céu de 2027 pra todo mundo, sem signo específico.</p>
+      <div class="preco">R$ 29,90</div>
+      <a class="btn" href="#" data-produto="calendario-geral">Quero</a>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="margin-top:16px">
+  <div class="corpo">
+    <span class="selo">Sob encomenda</span>
+    <h3>Calendário de mesa impresso</h3>
+    <p class="desc">O seu calendário impresso, de mesa, com espiral. Feito sob encomenda e entregue no fim de dezembro.</p>
+    <a class="btn sec" href="#" data-produto="calendario-fisico">Encomendar o meu</a>
+  </div>
+</div>
+
+<h2>Mapa astral</h2>
+
+<div class="card destaque">
+  <div class="corpo">
+    <span class="selo">Com consulta ao vivo</span>
+    <h3>Mapa Astral Completo + consulta</h3>
+    <p class="desc">Seu mapa completo em PDF e uma consulta ao vivo por vídeo comigo pra tirar suas dúvidas.</p>
+    <ul class="itens">
+      <li>Mapa completo e detalhado em PDF</li>
+      <li>Consulta ao vivo por chamada de vídeo</li>
+    </ul>
+    <div class="preco" data-preco="mapa-completo">Valor em breve</div>
+    <a class="btn" href="#" data-produto="mapa-completo">Quero meu mapa</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="corpo">
+    <h3>Mapa Astral Simples</h3>
+    <p class="desc">O essencial do seu mapa: Sol, Lua, ascendente e planetas, explicado de um jeito fácil.</p>
+    <div class="preco" data-preco="mapa-simples">Valor em breve</div>
+    <a class="btn" href="#" data-produto="mapa-simples">Quero</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="corpo">
+    <span class="selo breve">Em breve</span>
+    <h3>Calendário 2027 personalizado</h3>
+    <p class="desc">O calendário feito a partir do seu mapa, com a sua data, hora e cidade de nascimento.</p>
+    <a class="btn sec" href="#" data-produto="calendario-personalizado">Quero saber quando lançar</a>
+  </div>
+</div>
+
+<h2>Em breve</h2>
+
+<div class="mini">
+  <div class="card"><div class="corpo">
+    <h3>Sinastria</h3>
+    <p class="desc">Junta dois mapas e mostra o que rola entre vocês.</p>
+    <a class="btn sec" href="#" data-produto="sinastria">Me avisa</a>
+  </div></div>
+  <div class="card"><div class="corpo">
+    <h3>Mapa do dinheiro</h3>
+    <p class="desc">Como você ganha, gasta e atrai dinheiro.</p>
+    <a class="btn sec" href="#" data-produto="mapa-dinheiro">Me avisa</a>
+  </div></div>
+  <div class="card"><div class="corpo">
+    <h3>Mapa do desejo</h3>
+    <p class="desc">Sua vida amorosa e sexual no mapa, sem tabu.</p>
+    <a class="btn sec" href="#" data-produto="mapa-desejo">Me avisa</a>
+  </div></div>
+  <div class="card"><div class="corpo">
+    <h3>Céu do dia</h3>
+    <p class="desc">Grátis, todo dia às 21h no Instagram e TikTok.</p>
+    <a class="btn sec" href="https://www.instagram.com/seunorteastral/">Seguir</a>
+  </div></div>
+</div>
+
+<p class="nota">Dúvidas? Toque em "Fale comigo" lá em cima.</p>
+
+<footer>
+  <img src="img/icone.png" alt="">
+  © 2026 Seu Norte Astral · @seunorteastral
+</footer>
+</div>
+
+<script>
+/* ======== CONFIGURAÇÃO (é só trocar aqui) ========
+   WHATSAPP: seu número com 55 + DDD, só números. Ex.: "5512999999999".
+   Enquanto estiver vazio, os botões abrem o direct do Instagram.
+   LINKS: cole aqui o link de pagamento (Kiwify/Hotmart) de cada produto.
+   Produto sem link abre conversa com a mensagem pronta. */
+const WHATSAPP = "";
+const INSTAGRAM = "seunorteastral";
+const LINKS = {
+  "calendario-signo": {},          // ex.: { aries: "https://pay.kiwify.com.br/...", touro: "..." }
+  "pacote": "",
+  "calendario-mundo": "",
+  "calendario-geral": "",
+  "calendario-fisico": "",
+  "mapa-completo": "",
+  "mapa-simples": "",
+  "calendario-personalizado": "",
+  "sinastria": "", "mapa-dinheiro": "", "mapa-desejo": ""
+};
+const PRECOS = { "mapa-completo": "", "mapa-simples": "" };   // ex.: "R$ 149"
+const MENSAGENS = {
+  "calendario-signo": s => `Oi! Quero o Calendário 2027 de ${s} (PDF, R$ 29,90).`,
+  "pacote": () => "Oi! Quero o pacote com todos os calendários 2027 (R$ 97).",
+  "calendario-mundo": () => "Oi! Quero o Calendário 2027 Mundo (R$ 29,90).",
+  "calendario-geral": () => "Oi! Quero o Calendário 2027 Geral (R$ 29,90).",
+  "calendario-fisico": () => "Oi! Quero encomendar o calendário 2027 de mesa impresso.",
+  "mapa-completo": () => "Oi! Quero o Mapa Astral Completo com a consulta ao vivo.",
+  "mapa-simples": () => "Oi! Quero o Mapa Astral Simples.",
+  "calendario-personalizado": () => "Oi! Quero saber quando lançar o calendário personalizado.",
+  "sinastria": () => "Oi! Me avisa quando lançar a sinastria?",
+  "mapa-dinheiro": () => "Oi! Me avisa quando lançar o mapa do dinheiro?",
+  "mapa-desejo": () => "Oi! Me avisa quando lançar o mapa do desejo?",
+  "contato": () => "Oi! Vim pelo site do Seu Norte Astral."
+};
+/* ================================================ */
+
+function conversa(texto){
+  if (WHATSAPP) return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(texto);
+  return "https://ig.me/m/" + INSTAGRAM;
+}
+const sel = document.getElementById("signo");
+document.querySelectorAll("[data-produto]").forEach(a => {
+  a.addEventListener("click", e => {
+    e.preventDefault();
+    const id = a.dataset.produto;
+    let link = LINKS[id], msg;
+    if (id === "calendario-signo") {
+      if (!sel.value) { sel.focus(); sel.style.borderColor = "var(--ouro)"; return; }
+      const nome = sel.options[sel.selectedIndex].text;
+      link = (LINKS[id] || {})[sel.value];
+      msg = MENSAGENS[id](nome);
+    } else msg = MENSAGENS[id]();
+    window.location.href = link || conversa(msg);
+  });
+});
+document.querySelectorAll("[data-contato]").forEach(a => {
+  a.addEventListener("click", e => { e.preventDefault(); window.location.href = conversa(MENSAGENS.contato()); });
+});
+Object.entries(PRECOS).forEach(([k, v]) => {
+  const el = document.querySelector(`[data-preco="${k}"]`);
+  if (el && v) el.textContent = v;
+});
+</script>
+</body>
+</html>
